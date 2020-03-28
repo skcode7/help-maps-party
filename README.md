@@ -132,7 +132,7 @@ En el fichero `/src/settings.js` hay algunas configuraciones.
 - `center`: Son las coordenadas geográficas donde quieres que se situe el mapa de inicio.
 - `collectionName`: Es el nombre de la colección que has creado en Firestore para usarla de almacenamiento.
 
-## Despleigue del frontend en la nube
+## Despliegue del frontend en la nube
 
 Las instrucciones para desplegar el sitio en la nube puedes seguirlas en la página de Vue Cli.
 https://cli.vuejs.org/guide/deployment.html
