@@ -1,7 +1,7 @@
 export const center = {
-  lat: 40.4165001,
-  lng: -3.7025599
+  lat: -0.215255,
+  lng: -78.487138
 }
 
-export const collectionName = 'test-places';
+export const collectionName = 'dataMap';
 
