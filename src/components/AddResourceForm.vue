@@ -15,21 +15,29 @@
       </b-field>
       <b-field>
         <b-input
-          type="text"
-          v-model="form.link"
-          placeholder="Enlace a tu twitter o página personal"
-          required
-        >
-        </b-input>
-      </b-field>
-      <b-field>
-        <b-input
           maxlength="500"
           type="textarea"
           v-model="form.description"
           placeholder="¿Qué ofreces?"
           message="Describe aquí lo que ofreces"
           required
+        >
+        </b-input>
+      </b-field>
+      <b-field>
+        <b-input
+          type="text"
+          v-model="form.phone"
+          placeholder="Telefono de Contacto"
+          required
+        >
+        </b-input>
+      </b-field>
+      <b-field>
+        <b-input
+          type="text"
+          v-model="form.link"
+          placeholder="Enlace a tu twitter/facebook/página personal"
         >
         </b-input>
       </b-field>
@@ -79,6 +87,7 @@ export default {
       form: {
         title: "",
         description: "",
+        phone: "",
         link: "",
         position: {
           lat: "",
@@ -125,7 +134,7 @@ export default {
       if (
         this.form.title != "" &&
         this.form.description != "" &&
-        this.form.link != "" &&
+        this.form.phone != "" &&
         this.userGlobalMarker.lat != "" &&
         this.userGlobalMarker.lng != "" &&
         this.form.lopd == true
@@ -134,6 +143,7 @@ export default {
           .collection(collectionName)
           .add({
             title: this.form.title,
+            phone: this.form.phone,
             link: this.form.link,
             description: this.form.description,
             category: "general",
